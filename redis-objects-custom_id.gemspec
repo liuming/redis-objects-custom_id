@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "redis-objects-custom_id"
   spec.version       = Redis::Objects::CustomId::VERSION
   spec.authors       = ["Ming Liu"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.email         = ["liuming@lmws.net"]
+  spec.description   = %q{add ability to redis-objects gem to define customize id field}
+  spec.summary       = spec.description
+  spec.homepage      = "https://github.com/liuming/redis-objects-custom_id"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,6 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "redis"
+  spec.add_dependency "redis-objects", "~> 0.7"
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 end
